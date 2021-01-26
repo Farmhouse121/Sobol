@@ -8,7 +8,7 @@ def main():
     # arguments
     from argparse import ArgumentParser;
     args=ArgumentParser();
-    args.add_argument("mode",type=str,default='sobol',nargs='*',choices=['sobol','uniform'],help="Type of numbers to create.")
+    args.add_argument("-u","--uniform",action='store_true',help="Set to generate uniform random numbers not Sobol sequence.")
     args.add_argument("-d","--dimension",type=int,default=2,help="Dimensionality.")
     args.add_argument("-n","--number",type=int,default=100,help="Sample size.")
     args=args.parse_args();
@@ -17,7 +17,7 @@ def main():
     n,seed=args.number,1
     
     while n>0:
-        if args.mode=='uniform':
+        if args.uniform:
             vector=[uniform(0,1) for i in range(args.dimension)]
 
         else:
