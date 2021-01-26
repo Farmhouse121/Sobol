@@ -8,7 +8,7 @@ def main():
     # arguments
     from argparse import ArgumentParser;
     args=ArgumentParser();
-    args.add_argument("mode",type=str,default="sobol",nargs='*',choices=['sobol','uniform'],help="Type of numbers to create.")
+    args.add_argument("mode",type=str,default='sobol',nargs='*',choices=['sobol','uniform'],help="Type of numbers to create.")
     args.add_argument("-d","--dimension",type=int,default=2,help="Dimensionality.")
     args.add_argument("-n","--number",type=int,default=100,help="Sample size.")
     args=args.parse_args();
@@ -17,11 +17,11 @@ def main():
     n,seed=args.number,1
     
     while n>0:
-        if args.mode=='sobol':
-            vector,seed=sobol(args.dimension,seed)
-            
-        else:
+        if args.mode=='uniform':
             vector=[uniform(0,1) for i in range(args.dimension)]
+
+        else:
+            vector,seed=sobol(args.dimension,seed)
             
         print(",".join(map(str,vector)))
         n-=1
