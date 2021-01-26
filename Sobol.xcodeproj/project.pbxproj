@@ -6,10 +6,15 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		8C1EC39025C064B100704309 /* sobol.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = sobol.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		8C1EC38925C0647000704309 = {
 			isa = PBXGroup;
 			children = (
+				8C1EC39025C064B100704309 /* sobol.py */,
 			);
 			sourceTree = "<group>";
 		};
