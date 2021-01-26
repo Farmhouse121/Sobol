@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate random pairs of Sobol sequence numbers (or uniform for contrast)."""
+"""Generate random sets of Sobol sequence numbers (or uniform). Graham L Giller"""
 from sys import stderr,stdout,version_info
 from sobol_seq import i4_sobol as sobol
 from random import uniform
